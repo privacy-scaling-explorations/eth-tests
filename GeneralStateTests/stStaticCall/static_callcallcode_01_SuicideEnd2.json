@@ -2,10 +2,10 @@
     "static_callcallcode_01_SuicideEnd2" : {
         "_info" : {
             "comment" : "",
-            "filling-rpc-server" : "evm version 1.10.16-unstable-0f893109-20220105",
-            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.01c6aac2.Linux.g++",
-            "generatedTestHash" : "1d55bd409571b88422fd0c5cfecf81b287284c447417d1a725081dbe13449097",
-            "lllcversion" : "Version: 0.5.14-develop.2021.11.27+commit.401d5358.Linux.g++",
+            "filling-rpc-server" : "evm version 1.10.19-stable",
+            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.7e597e14.Linux.g++",
+            "generatedTestHash" : "41f1026c928fb9375e07e9f9e1cf079ebc93a05e2343ec539d0ec720a00affff",
+            "lllcversion" : "Version: 0.5.14-develop.2022.6.27+commit.401d5358.Linux.g++",
             "solidity" : "Version: 0.8.5+commit.a4f2e591.Linux.g++",
             "source" : "src/GeneralStateTestsFiller/stStaticCall/static_callcallcode_01_SuicideEnd2Filler.json",
             "sourceHash" : "8b84c38d62a381df5b754ca5f7ab7cb13d188be1f105a1f09516691593bddb79"
@@ -16,6 +16,7 @@
             "currentDifficulty" : "0x020000",
             "currentGasLimit" : "0x01c9c380",
             "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000020000",
             "currentTimestamp" : "0x03e8",
             "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
         },
@@ -47,6 +48,30 @@
             "London" : [
                 {
                     "hash" : "0xd9b4086bac6c51ffcb3f362d95915109fad7b90e6d0174b9824df8301a5342b5",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a832dc6c094100000000000000000000000000000000000000080801ba07763c200d265ba0050627c8c7b4c19bf118b3581a3de22dbcebdfcb6e8565790a0514908f638ddc4b1402230e34692f43bb92713ff2cad3627814cf6fb19ac2e43"
+                }
+            ],
+            "Merge" : [
+                {
+                    "hash" : "0xd9b4086bac6c51ffcb3f362d95915109fad7b90e6d0174b9824df8301a5342b5",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a832dc6c094100000000000000000000000000000000000000080801ba07763c200d265ba0050627c8c7b4c19bf118b3581a3de22dbcebdfcb6e8565790a0514908f638ddc4b1402230e34692f43bb92713ff2cad3627814cf6fb19ac2e43"
+                }
+            ],
+            "ZkEvm" : [
+                {
+                    "hash" : "0x4808744a1428a14c066e11ae21aa4511e95ecd8593b57ad4514d9f9007150272",
                     "indexes" : {
                         "data" : 0,
                         "gas" : 0,

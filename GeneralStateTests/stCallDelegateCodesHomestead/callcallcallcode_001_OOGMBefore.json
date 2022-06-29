@@ -2,10 +2,10 @@
     "callcallcallcode_001_OOGMBefore" : {
         "_info" : {
             "comment" : "CALL -> CALL -> OOG DELEGATE -> CODE ",
-            "filling-rpc-server" : "evm version 1.10.16-unstable-0f893109-20220105",
-            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.01c6aac2.Linux.g++",
-            "generatedTestHash" : "c10a9c7432ee7df64c10a6f522069c1e37e412070f18ecb78142b477275b3e7b",
-            "lllcversion" : "Version: 0.5.14-develop.2021.11.27+commit.401d5358.Linux.g++",
+            "filling-rpc-server" : "evm version 1.10.19-stable",
+            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.7e597e14.Linux.g++",
+            "generatedTestHash" : "45a02561150cab1e712d130dd53c3639d35b6c5ba0dbca681a6cccc35d01da67",
+            "lllcversion" : "Version: 0.5.14-develop.2022.6.27+commit.401d5358.Linux.g++",
             "solidity" : "Version: 0.8.5+commit.a4f2e591.Linux.g++",
             "source" : "src/GeneralStateTestsFiller/stCallDelegateCodesHomestead/callcallcallcode_001_OOGMBeforeFiller.json",
             "sourceHash" : "3404ea68754c8317613976b5a733578b945a65eef50871fc47488bbd12f14929"
@@ -16,6 +16,7 @@
             "currentDifficulty" : "0x020000",
             "currentGasLimit" : "0x01c9c380",
             "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000020000",
             "currentTimestamp" : "0x03e8",
             "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
         },
@@ -47,6 +48,30 @@
             "London" : [
                 {
                     "hash" : "0x4a759d052ede5b2b8e26e8b4ac81815efbd97a371b89bb938b2bdbc24fd80ae6",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a830f424094100000000000000000000000000000000000000080801ba0878fccf1801724b1bfb5b0a67d68454b9c56fe9e3753200bc36cd66eed5636eca00dc53455b0e859433799ddbe3c16f98e70c52b6bf684992d9907dc9d1ccb03f1"
+                }
+            ],
+            "Merge" : [
+                {
+                    "hash" : "0x4a759d052ede5b2b8e26e8b4ac81815efbd97a371b89bb938b2bdbc24fd80ae6",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a830f424094100000000000000000000000000000000000000080801ba0878fccf1801724b1bfb5b0a67d68454b9c56fe9e3753200bc36cd66eed5636eca00dc53455b0e859433799ddbe3c16f98e70c52b6bf684992d9907dc9d1ccb03f1"
+                }
+            ],
+            "ZkEvm" : [
+                {
+                    "hash" : "0x1b639d5bc35a368af2295cdf0a88bb04937bcc4139e9b41fc9a7000be470da6c",
                     "indexes" : {
                         "data" : 0,
                         "gas" : 0,

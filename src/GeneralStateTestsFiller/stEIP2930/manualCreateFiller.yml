@@ -1,6 +1,6 @@
 manualCreate:
 
-# Create contracts using contract creation transactions instead of 
+# Create contracts using contract creation transactions instead of
 # CREATE or CREATE2 from the evm
 
   env:
@@ -60,6 +60,7 @@ manualCreate:
     # STOP           00
 
 
+    - :label noList :raw 0x5A3031505A90036001555A60FF6000555A900360005500
 
     - data: :label allBad :raw 0x5A3031505A90036001555A60FF6000555A900360005500
       accessList:
@@ -95,12 +96,13 @@ manualCreate:
   expect:
 
   - indexes:
-      data: 
+      data:
       - :label allGood
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0xec0e71ad0a90ffe1909d27dac207f7680abba42d:
          storage:
@@ -110,13 +112,26 @@ manualCreate:
 
 
   - indexes:
-      data: 
+      data:
       - :label addrGoodCellBad
       - :label allBad
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
+    result:
+      0xec0e71ad0a90ffe1909d27dac207f7680abba42d:
+         storage:
+            00: 0x565c  # 22100, cost for undeclared cell
+            01: 0x006a  # 106, address, balance (known addr), pop
+
+  - indexes:
+      data: :label noList
+      gas: !!int -1
+      value: !!int -1
+    network:
+    - "ZkEvm"
     result:
       0xec0e71ad0a90ffe1909d27dac207f7680abba42d:
          storage:

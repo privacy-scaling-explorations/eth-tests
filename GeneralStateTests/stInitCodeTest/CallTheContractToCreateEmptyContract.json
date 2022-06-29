@@ -2,10 +2,10 @@
     "CallTheContractToCreateEmptyContract" : {
         "_info" : {
             "comment" : "",
-            "filling-rpc-server" : "evm version 1.10.16-unstable-0f893109-20220105",
-            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.01c6aac2.Linux.g++",
-            "generatedTestHash" : "7faa2a61f677640b236c2a300d376520182e566a3e17e4257d811baeafb047fb",
-            "lllcversion" : "Version: 0.5.14-develop.2021.11.27+commit.401d5358.Linux.g++",
+            "filling-rpc-server" : "evm version 1.10.19-stable",
+            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.7e597e14.Linux.g++",
+            "generatedTestHash" : "b1be5798be578777de32e73ffd06952c32ce30de4a83e1ff15850a4291dd8d2b",
+            "lllcversion" : "Version: 0.5.14-develop.2022.6.27+commit.401d5358.Linux.g++",
             "solidity" : "Version: 0.8.5+commit.a4f2e591.Linux.g++",
             "source" : "src/GeneralStateTestsFiller/stInitCodeTest/CallTheContractToCreateEmptyContractFiller.json",
             "sourceHash" : "a84bb4e0822880af455cfd6eb0a37e87cdfd780b7172d00b62cadc605fe49d95"
@@ -16,6 +16,7 @@
             "currentDifficulty" : "0x020000",
             "currentGasLimit" : "0x05f5e100",
             "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000020000",
             "currentTimestamp" : "0x03e8",
             "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
         },
@@ -47,6 +48,30 @@
             "London" : [
                 {
                     "hash" : "0x5266af4dd4c8fc5e75323ddec289c3b4822276f872542013a7e7cd6e6e5c956d",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a830186a094095e7baea6a6c7c4c2dfeb977efac326af552d8701001ca0c304927ac7f3bc1a06346b725ea3d75b31b2ff1eda10e7eace007949c7a5177ea018749f9814ab777e2603ed226da281018c76d2067e987bb3e1dcfd291c6566bc"
+                }
+            ],
+            "Merge" : [
+                {
+                    "hash" : "0x5266af4dd4c8fc5e75323ddec289c3b4822276f872542013a7e7cd6e6e5c956d",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a830186a094095e7baea6a6c7c4c2dfeb977efac326af552d8701001ca0c304927ac7f3bc1a06346b725ea3d75b31b2ff1eda10e7eace007949c7a5177ea018749f9814ab777e2603ed226da281018c76d2067e987bb3e1dcfd291c6566bc"
+                }
+            ],
+            "ZkEvm" : [
+                {
+                    "hash" : "0x9230d78927e01f65608fc1a01fb8fea023488fcde9b64f007ed32f6ac7819a99",
                     "indexes" : {
                         "data" : 0,
                         "gas" : 0,

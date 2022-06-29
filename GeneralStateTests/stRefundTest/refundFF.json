@@ -2,13 +2,16 @@
     "refundFF" : {
         "_info" : {
             "comment" : "Ori Pomerantz   qbzzt1@gmail.com",
-            "filling-rpc-server" : "evm version 1.10.16-unstable-0f893109-20220105",
-            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.01c6aac2.Linux.g++",
-            "generatedTestHash" : "0f2a875a2648295463ac75a8ba7115862cd2843ed883b44c19a8edc5f033f403",
-            "lllcversion" : "Version: 0.5.14-develop.2021.11.27+commit.401d5358.Linux.g++",
+            "filling-rpc-server" : "evm version 1.10.19-stable",
+            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.7e597e14.Linux.g++",
+            "generatedTestHash" : "735bffe198ece20fdcab8cbdce0b4f55d617dca551eb5b812b4dc121d6eaf2c1",
+            "labels" : {
+                "0" : "type0"
+            },
+            "lllcversion" : "Version: 0.5.14-develop.2022.6.27+commit.401d5358.Linux.g++",
             "solidity" : "Version: 0.8.5+commit.a4f2e591.Linux.g++",
             "source" : "src/GeneralStateTestsFiller/stRefundTest/refundFFFiller.yml",
-            "sourceHash" : "e8b49a3ac2d52b3bee331c5a32d7cf463a70282193a148d3f4a3dca8542f8196"
+            "sourceHash" : "563bb1edcd5460e98de2663c75b005075074740f22582fd8f6bd6f87d3f8480e"
         },
         "env" : {
             "currentBaseFee" : "0x03e8",
@@ -16,6 +19,7 @@
             "currentDifficulty" : "0x020000",
             "currentGasLimit" : "0x01000000",
             "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000020000",
             "currentTimestamp" : "0x03e8",
             "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
         },
@@ -25,6 +29,16 @@
                     "hash" : "0x4c63b99dca1faff010457fad0507433ae6d1f86a2228da946bf42ccaf3689110",
                     "indexes" : {
                         "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf862018203e88327b02894cccccccccccccccccccccccccccccccccccccccc80001ba097a1f1111ae5aca56a8052c009d36c5361e647e448a698923f30bfa442798099a0633196a5eb1f4b6e2d0766cd349fab6501998c455dc036ae44ee4d61d14d9800"
+                },
+                {
+                    "hash" : "0x4c63b99dca1faff010457fad0507433ae6d1f86a2228da946bf42ccaf3689110",
+                    "indexes" : {
+                        "data" : 1,
                         "gas" : 0,
                         "value" : 0
                     },
@@ -41,7 +55,51 @@
                         "value" : 0
                     },
                     "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf862018203e88327b02894cccccccccccccccccccccccccccccccccccccccc80001ba097a1f1111ae5aca56a8052c009d36c5361e647e448a698923f30bfa442798099a0633196a5eb1f4b6e2d0766cd349fab6501998c455dc036ae44ee4d61d14d9800"
+                },
+                {
+                    "hash" : "0x637d8fff0de11cbfd18c15f90d0019dc5f76a010be1dc58b0483f975e19d6784",
+                    "indexes" : {
+                        "data" : 1,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
                     "txbytes" : "0x01f86401018203e88327b02894cccccccccccccccccccccccccccccccccccccccc8000c080a039a0a692787fa83274937107332a154b786bf2cb1f80d1f20fe49d20da6ba324a0103bb80408321d84a1db211dfc777a640db593e889d6ec52f94d8718db3935c6"
+                }
+            ],
+            "Merge" : [
+                {
+                    "hash" : "0x637d8fff0de11cbfd18c15f90d0019dc5f76a010be1dc58b0483f975e19d6784",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf862018203e88327b02894cccccccccccccccccccccccccccccccccccccccc80001ba097a1f1111ae5aca56a8052c009d36c5361e647e448a698923f30bfa442798099a0633196a5eb1f4b6e2d0766cd349fab6501998c455dc036ae44ee4d61d14d9800"
+                },
+                {
+                    "hash" : "0x637d8fff0de11cbfd18c15f90d0019dc5f76a010be1dc58b0483f975e19d6784",
+                    "indexes" : {
+                        "data" : 1,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0x01f86401018203e88327b02894cccccccccccccccccccccccccccccccccccccccc8000c080a039a0a692787fa83274937107332a154b786bf2cb1f80d1f20fe49d20da6ba324a0103bb80408321d84a1db211dfc777a640db593e889d6ec52f94d8718db3935c6"
+                }
+            ],
+            "ZkEvm" : [
+                {
+                    "hash" : "0x177754853fdfafc3e58314c37f66173f0e3d4b1b5f30fc6f25388ee4b157ae05",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf862018203e88327b02894cccccccccccccccccccccccccccccccccccccccc80001ba097a1f1111ae5aca56a8052c009d36c5361e647e448a698923f30bfa442798099a0633196a5eb1f4b6e2d0766cd349fab6501998c455dc036ae44ee4d61d14d9800"
                 }
             ]
         },
@@ -70,10 +128,12 @@
         },
         "transaction" : {
             "accessLists" : [
+                null,
                 [
                 ]
             ],
             "data" : [
+                "0x00",
                 "0x00"
             ],
             "gasLimit" : [

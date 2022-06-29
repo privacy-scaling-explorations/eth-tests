@@ -2,10 +2,10 @@
     "extCodeHashNewAccount" : {
         "_info" : {
             "comment" : "EXTCODEHASH/EXTCODESIZE of an account created in same transaction",
-            "filling-rpc-server" : "evm version 1.10.16-unstable-0f893109-20220105",
-            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.01c6aac2.Linux.g++",
-            "generatedTestHash" : "28a528f1854aa923401ed289ae8f89aa517e5ce13db1540167fdaabf57b54a26",
-            "lllcversion" : "Version: 0.5.14-develop.2021.11.27+commit.401d5358.Linux.g++",
+            "filling-rpc-server" : "evm version 1.10.19-stable",
+            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.7e597e14.Linux.g++",
+            "generatedTestHash" : "fe01bb26c913f0f4d89d54ca190c767b8e69cb3ebc667f79e715473cbf34d6d3",
+            "lllcversion" : "Version: 0.5.14+commit.401d5358.Linux.g++",
             "solidity" : "Version: 0.8.5+commit.a4f2e591.Linux.g++",
             "source" : "src/GeneralStateTestsFiller/stExtCodeHash/extCodeHashNewAccountFiller.json",
             "sourceHash" : "9547352117e0b65966504ae0a3496f4603fd18b21e2bf570d26bb75ff805f0b6"
@@ -16,6 +16,7 @@
             "currentDifficulty" : "0x020000",
             "currentGasLimit" : "0x0f4240",
             "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000020000",
             "currentTimestamp" : "0x03e8",
             "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
         },
@@ -47,6 +48,30 @@
             "London" : [
                 {
                     "hash" : "0x226cf180878861ebd743f5d51fb43199ada404fed4bf93b20600bf9589b60259",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a83061a8094deadbeef0000000000000000000000000000000001801ba0c70648a23c02191279c15ab01916a8cb993eed71d08e39b46df27c4286ecc6caa0671a98307a8881b1759f11640fff23373b026be67c3cb9638d642bea99ffb908"
+                }
+            ],
+            "Merge" : [
+                {
+                    "hash" : "0x226cf180878861ebd743f5d51fb43199ada404fed4bf93b20600bf9589b60259",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a83061a8094deadbeef0000000000000000000000000000000001801ba0c70648a23c02191279c15ab01916a8cb993eed71d08e39b46df27c4286ecc6caa0671a98307a8881b1759f11640fff23373b026be67c3cb9638d642bea99ffb908"
+                }
+            ],
+            "ZkEvm" : [
+                {
+                    "hash" : "0x9afb8d5f8997b3510ef843b97ff09f56cbb6e41126737c128ee88c82ef0fa713",
                     "indexes" : {
                         "data" : 0,
                         "gas" : 0,

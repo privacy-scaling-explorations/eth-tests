@@ -5,7 +5,7 @@ transactionCosts:
   #
   # To do this we send various transactions with different access lists,
   # and then check the remaining balance of the account that sends the
-  # transactions. 
+  # transactions.
 
 
   # Cost of a storage key (ACCESS_LIST_STORAGE_KEY_COST) 1900
@@ -28,7 +28,7 @@ transactionCosts:
 
   pre:
 
-    # Do nothing 
+    # Do nothing
     cccccccccccccccccccccccccccccccccccccccc:
       balance: '0x0ba1a9ce0ba1a9ce'
 
@@ -70,7 +70,7 @@ transactionCosts:
 
 
 
-    # One address, one storage key. The values of addresses and storage keys 
+    # One address, one storage key. The values of addresses and storage keys
     # don't matter to the cost of the access list - just how many of them
     # there are
     # ONE_ONE
@@ -139,7 +139,7 @@ transactionCosts:
 
     # Duplicate address, different storage keys
     # DUP_ADDR
-    - data: :label addrs_2_keys_2 :raw 0x00 
+    - data: :label addrs_2_keys_2 :raw 0x00
       accessList:
       - address: 0x0000000000000000000000000000000000000101
         storageKeys:
@@ -161,7 +161,7 @@ transactionCosts:
 
     # Duplicate storage key
     # DUP_KEY
-    - data: :label addrs_1_keys_2 :raw 0x00   
+    - data: :label addrs_1_keys_2 :raw 0x00
       accessList:
       - address: 0x0000000000000000000000000000000000000101
         storageKeys:
@@ -171,7 +171,7 @@ transactionCosts:
 
     # A large access list
     # LARGE
-    - data: :label addrs_10_keys_25 :raw 0x00   
+    - data: :label addrs_10_keys_25 :raw 0x00
       accessList:
       - address: 0x0000000000000000000000000000000000000100
         storageKeys:
@@ -241,13 +241,32 @@ transactionCosts:
   - indexes:
       # NO_LIST
       # EMPTY_LIST
-      data: 
+      data:
       - :label type0
       - :label addrs_0_keys_0
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
+    result:
+      a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
+        balance: 100000000
+        # Without an access list the cost of the transaction is 121004
+        #
+        # We add that to the initial balance so we can count down from
+        # a nice round number. It doesn't matter if the transaction is old
+        # style (type 0), or if it simply doesn't have entries in the access
+        # list
+
+  - indexes:
+      # NO_LIST
+      data:
+      - :label type0
+      gas: !!int -1
+      value: !!int -1
+    network:
+    - "ZkEvm"
     result:
       a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
         balance: 100000000
@@ -267,7 +286,8 @@ transactionCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
         balance: 99976000
@@ -283,7 +303,8 @@ transactionCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
         balance: 99957000
@@ -303,16 +324,17 @@ transactionCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
         balance: 99938000
-       
+
 
 
   # An access list with two addresses and two storage keys in it
   # It costs 8600, 2400*2 for the addresses and 2*1900 for the keys
-  # 
+  #
   # Another test checks what happens when the two addresses are the same,
   # it does not matter - access lists are not checked for duplicates,
   # so you pay for each entry, needed or not.
@@ -324,14 +346,15 @@ transactionCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
         balance: 99914000
-       
 
 
-  # A big list of ten addresses and twenty five keys. 
+
+  # A big list of ten addresses and twenty five keys.
   # The cost is still 2400 per address and 1900 per key
   # LARGE
   - indexes:
@@ -339,7 +362,8 @@ transactionCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
         balance: 99285000

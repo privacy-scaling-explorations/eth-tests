@@ -2,10 +2,10 @@
     "shiftCombinations" : {
         "_info" : {
             "comment" : "https://github.com/ethereum/tests/issues/564",
-            "filling-rpc-server" : "evm version 1.10.16-unstable-0f893109-20220105",
-            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.01c6aac2.Linux.g++",
-            "generatedTestHash" : "7ac6fe9d8f29f5394a733985f63a353843b83536feeb247f0b43a110c51e7d1f",
-            "lllcversion" : "Version: 0.5.14-develop.2021.11.27+commit.401d5358.Linux.g++",
+            "filling-rpc-server" : "evm version 1.10.19-stable",
+            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.7e597e14.Linux.g++",
+            "generatedTestHash" : "149a6f351e85cf52e4f818eb1f7942f77f79d38b2d329d7f6b35f86faa282600",
+            "lllcversion" : "Version: 0.5.14+commit.401d5358.Linux.g++",
             "solidity" : "Version: 0.8.5+commit.a4f2e591.Linux.g++",
             "source" : "src/GeneralStateTestsFiller/stShift/shiftCombinationsFiller.yml",
             "sourceHash" : "8ee650ebee957f04a3b4aa13286b882d0ed5d0dcc7d7a83fe7223b505f761f44"
@@ -16,6 +16,7 @@
             "currentDifficulty" : "0x020000",
             "currentGasLimit" : "0x05f5e100",
             "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000020000",
             "currentTimestamp" : "0x03e8",
             "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
         },
@@ -47,6 +48,30 @@
             "London" : [
                 {
                     "hash" : "0xb3b78b46c1fd3051bb2cb46b703db21b6ec760f50f406a686cb887b720baeec8",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf861800a8404c4b40094095e7baea6a6c7c4c2dfeb977efac326af552d8701801ba0ee27b78889f9804d41653c96e9719d812664cdad812b86cfbcd5aed83cd93e87a05fdfe56c164829fe45dd3008c5daa006a2e2e4e87de68c39622b11d07f1b3775"
+                }
+            ],
+            "Merge" : [
+                {
+                    "hash" : "0xb3b78b46c1fd3051bb2cb46b703db21b6ec760f50f406a686cb887b720baeec8",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf861800a8404c4b40094095e7baea6a6c7c4c2dfeb977efac326af552d8701801ba0ee27b78889f9804d41653c96e9719d812664cdad812b86cfbcd5aed83cd93e87a05fdfe56c164829fe45dd3008c5daa006a2e2e4e87de68c39622b11d07f1b3775"
+                }
+            ],
+            "ZkEvm" : [
+                {
+                    "hash" : "0x350dbee2363c36e51387289a2198d34b3198ed4e7a3486d0f6e484fa62c5122e",
                     "indexes" : {
                         "data" : 0,
                         "gas" : 0,

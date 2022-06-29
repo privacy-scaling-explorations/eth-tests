@@ -22,7 +22,7 @@ CREATE2_EOF1:
       storage: {}
 
   transaction:
-    data: 
+    data:
       #- ':yul { mstore8(0, 0xef) return(0, 1) }'
       - ':label deploying_0xef :raw 0x60ef60005360016000f3'
       #- ':yul { mstore8(0, 0xef) return(0, 2) }'
@@ -119,6 +119,7 @@ CREATE2_EOF1:
        value: !!int -1
       network:
         - '>=London'
+        - 'ZkEvm'
       result:
        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
           nonce: 1
@@ -135,6 +136,7 @@ CREATE2_EOF1:
        value: !!int -1
       network:
         - '>=London'
+        - 'ZkEvm'
       result:
        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
           nonce: 1
@@ -151,6 +153,7 @@ CREATE2_EOF1:
        value: !!int -1
       network:
         - '>=London'
+        - 'ZkEvm'
       result:
        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
           nonce: 1
@@ -167,6 +170,7 @@ CREATE2_EOF1:
        value: !!int -1
       network:
         - '>=London'
+        - 'ZkEvm'
       result:
        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
           nonce: 1

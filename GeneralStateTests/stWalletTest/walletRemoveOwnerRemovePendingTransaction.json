@@ -2,10 +2,10 @@
     "walletRemoveOwnerRemovePendingTransaction" : {
         "_info" : {
             "comment" : "",
-            "filling-rpc-server" : "evm version 1.10.16-unstable-0f893109-20220105",
-            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.01c6aac2.Linux.g++",
-            "generatedTestHash" : "94975cb1ee1e371edc76bd5ef01b83255dfa68348b0201191f3e4c6cf1add982",
-            "lllcversion" : "Version: 0.5.14-develop.2021.11.27+commit.401d5358.Linux.g++",
+            "filling-rpc-server" : "evm version 1.10.19-stable",
+            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.7e597e14.Linux.g++",
+            "generatedTestHash" : "6c9d6a70d1152ceb9529bc45c14ab41f96f87b0da9fa779a69901379fdabe80f",
+            "lllcversion" : "Version: 0.5.14-develop.2022.6.27+commit.401d5358.Linux.g++",
             "solidity" : "Version: 0.8.5+commit.a4f2e591.Linux.g++",
             "source" : "src/GeneralStateTestsFiller/stWalletTest/walletRemoveOwnerRemovePendingTransactionFiller.json",
             "sourceHash" : "935f107213e6474703b69e7a33beb7b64bd3484d2dbb0896c01f6d2d4d76e2d6"
@@ -16,6 +16,7 @@
             "currentDifficulty" : "0x020000",
             "currentGasLimit" : "0x05f5e100",
             "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000020000",
             "currentTimestamp" : "0x03e8",
             "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
         },
@@ -47,6 +48,30 @@
             "London" : [
                 {
                     "hash" : "0x6e682d429cfadc4cc938c58f3f9f73ca5c0a81959ec3256d23df6b24abd2951f",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x3f13793a99095532416da372dfab6229094f0f08494851939fa7ef0dea29e8bb",
+                    "txbytes" : "0xf884800a8398968094ec0e71ad0a90ffe1909d27dac207f7680abba42d80a4173825d9000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b1ca04658d0585afe7eeae9c44653a7d1101e7dd670687644697bf7bc4b24a763e0bca03d43bc957fc2eb0c38b53cdb5e7f2448b2cc337108caf28871e2747b13579bad"
+                }
+            ],
+            "Merge" : [
+                {
+                    "hash" : "0x6e682d429cfadc4cc938c58f3f9f73ca5c0a81959ec3256d23df6b24abd2951f",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x3f13793a99095532416da372dfab6229094f0f08494851939fa7ef0dea29e8bb",
+                    "txbytes" : "0xf884800a8398968094ec0e71ad0a90ffe1909d27dac207f7680abba42d80a4173825d9000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b1ca04658d0585afe7eeae9c44653a7d1101e7dd670687644697bf7bc4b24a763e0bca03d43bc957fc2eb0c38b53cdb5e7f2448b2cc337108caf28871e2747b13579bad"
+                }
+            ],
+            "ZkEvm" : [
+                {
+                    "hash" : "0xa65ec7368168afca509e8d7b2144602e610926925d862aa8bad115e8b2b59f7d",
                     "indexes" : {
                         "data" : 0,
                         "gas" : 0,

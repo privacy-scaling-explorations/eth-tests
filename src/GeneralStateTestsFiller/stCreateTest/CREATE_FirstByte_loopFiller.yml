@@ -22,8 +22,8 @@ CREATE_FirstByte_loop:
         {
           // initcode: { mstore8(0, 0x00) return(0, 1) }
           mstore(0, 0x600060005360016000f300000000000000000000000000000000000000000000)
-          for { let code := 0 } lt(code, 256) { code := add(code, 1) } 
-          { 
+          for { let code := 0 } lt(code, 256) { code := add(code, 1) }
+          {
             mstore8(1, code) // change returned byte in initcode
             if iszero(create(0, 0, 10)) { sstore(code, 1) }
           }
@@ -33,7 +33,7 @@ CREATE_FirstByte_loop:
       storage: {}
 
   transaction:
-    data: 
+    data:
       - ''
     gasLimit:
       - 70000000
@@ -80,6 +80,7 @@ CREATE_FirstByte_loop:
        value: !!int -1
       network:
         - '>=London'
+        - 'ZkEvm'
       result:
        a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
           nonce: 1

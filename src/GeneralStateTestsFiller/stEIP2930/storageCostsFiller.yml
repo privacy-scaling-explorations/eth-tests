@@ -23,11 +23,11 @@ storageCosts:
     0000000000000000000000000000000000000100:
       balance: '1000000000000000000'
       code: |
-       { 
+       {
         ; Write to @@0, and see how much gas that cost. It should
         ; cost more when it is not declared storage
           [0]   (gas)
-         [[0]]  0x02 
+         [[0]]  0x02
           [0]   (- @0 (gas) 17)
          [[1]] @0
 
@@ -52,11 +52,11 @@ storageCosts:
     0000000000000000000000000000000000000101:
       balance: '1000000000000000000'
       code: |
-       { 
+       {
         ; Read @@0, and see how much gas that cost. It should
         ; cost more when it is not declared storage
           [0]   (gas)
-          @@0 
+          @@0
           [0]   (- @0 (gas) 19)
          [[1]] @0
 
@@ -78,11 +78,11 @@ storageCosts:
       storage:
         0x00: 0x60A7
       code: |
-       { 
+       {
         ; Write to @@0, and see how much gas that cost. It should
         ; cost more when it is not declared storage
           [0]   (gas)
-         [[0]]  0x00 
+         [[0]]  0x00
           [0]   (- @0 (gas) 17)
          [[1]] @0
 
@@ -112,7 +112,7 @@ storageCosts:
       storage:
         0x00: 0x60A7
       code: |
-       { 
+       {
         ; Write to @@0, and see how much gas that cost. It should
         ; cost more when it is not declared storage
           [0]   (gas)
@@ -143,7 +143,7 @@ storageCosts:
       storage:
         0x00: 0x60A7
       code: |
-       { 
+       {
         ; Write to @@0, and see how much gas that cost. It should
         ; cost more when it is not declared storage
           [0]   (gas)
@@ -172,7 +172,7 @@ storageCosts:
       storage:
         0x00: 0x00
       code: |
-       { 
+       {
         ; Write to @@0, and see how much gas that cost. It should
         ; cost more when it is not declared storage
           [0]   (gas)
@@ -196,18 +196,18 @@ storageCosts:
 
     # Declared vs. undeclared write (SSTORE), after writing to the storage
     # STORE_THEN_WRITE_DECLARED
-    # STORE_THEN_WRITE_UNDECLARED    
+    # STORE_THEN_WRITE_UNDECLARED
     0000000000000000000000000000000000000110:
       balance: '1000000000000000000'
       code: |
-       { 
+       {
 
          [[0]] 0x60A7
 
         ; Write to @@0, and see how much gas that cost. It should
         ; cost more when it is not declared storage
           [0]   (gas)
-         [[0]]  0x02 
+         [[0]]  0x02
           [0]   (- @0 (gas) 17)
          [[1]] @0
 
@@ -227,17 +227,17 @@ storageCosts:
 
     # Declared vs. undeclared read (SLOAD), after writing to the storage
     # STORE_THEN_READ_DECLARED
-    # STORE_THEN_READ_UNDECLARED    
+    # STORE_THEN_READ_UNDECLARED
     0000000000000000000000000000000000000111:
       balance: '1000000000000000000'
       code: |
-       { 
+       {
          [[0]] 0x60A7
 
         ; Read @@0, and see how much gas that cost. It should
         ; cost more when it is not declared storage
           [0]   (gas)
-          @@0 
+          @@0
           [0]   (- @0 (gas) 19)
          [[1]] @0
 
@@ -250,17 +250,17 @@ storageCosts:
 
     # Declared vs. undeclared write (SSTORE), after reading the storage
     # LOAD_THEN_WRITE_DECLARED
-    # LOAD_THEN_WRITE_UNDECLARED    
+    # LOAD_THEN_WRITE_UNDECLARED
     0000000000000000000000000000000000000120:
       balance: '1000000000000000000'
       code: |
-       { 
+       {
          [0x20] @@0
 
         ; Write to @@0, and see how much gas that cost. It should
         ; cost more when it is not declared storage
           [0]   (gas)
-         [[0]]  0x02 
+         [[0]]  0x02
           [0]   (- @0 (gas) 17)
          [[1]] @0
 
@@ -280,16 +280,16 @@ storageCosts:
 
     # Declared vs. undeclared read (SLOAD), after already reading it
     # LOAD_THEN_READ_DECLARED
-    # LOAD_THEN_READ_UNDECLARED        
+    # LOAD_THEN_READ_UNDECLARED
     0000000000000000000000000000000000000121:
       balance: '1000000000000000000'
       code: |
-       { 
+       {
          [0x20] @@0
 
         ; Read @@0, and see how much gas that cost.
           [0]   (gas)
-          @@0 
+          @@0
           [0]   (- @0 (gas) 19)
          [[1]] @0
 
@@ -309,12 +309,12 @@ storageCosts:
       balance: '0x0ba1a9ce0ba1a9ce'
       code: |
         { ; TO_ADDR_VALID   TO_ADDR_INVALID_ADDR    TO_ADDR_INVALID_CELL
-          ; Call a different contract 
+          ; Call a different contract
           (call (gas) (+ 0x100 $4) 0 0 0 0 0)
 
           ; Read @@0, and see how much gas that cost.
             [0]   (gas)
-            @@0x60A7 
+            @@0x60A7
             [0]   (- @0 (gas) 19)
            [[1]] @0
 
@@ -322,7 +322,7 @@ storageCosts:
           ; Write to @@0, and see how much gas that cost. It should
           ; cost more when it is not declared storage
             [0]   (gas)
-           [[0]]  0x02 
+           [[0]]  0x02
             [0]   (- @0 (gas) 17)
            [[2]] @0
 
@@ -332,7 +332,7 @@ storageCosts:
           ; GAS
 
 
-        }  
+        }
       nonce: '0'
       storage:
         0x60A7: 0xDEAD
@@ -362,29 +362,29 @@ storageCosts:
       - address: 0x0000000000000000000000000000000000000101
         storageKeys:
         - 0x00
-        
+
     # DEL_DECLARED
     - data: :label declaredKeyDel :abi f(uint) 2
       accessList:
       - address: 0x0000000000000000000000000000000000000102
         storageKeys:
         - 0x00
-        
+
     # UPDATE_DECLARED
     - data: :label declaredKeyUpdate :abi f(uint) 3
       accessList:
       - address: 0x0000000000000000000000000000000000000103
         storageKeys:
         - 0x00
-        
-    # NOP_DECLARED 
+
+    # NOP_DECLARED
     - data: :label declaredKeyNOP :abi f(uint) 4
       accessList:
       - address: 0x0000000000000000000000000000000000000104
         storageKeys:
         - 0x00
-     
-    # NOP0_DECLARED 
+
+    # NOP0_DECLARED
     - data: :label declaredKeyNOP0 :abi f(uint) 5
       accessList:
       - address: 0x0000000000000000000000000000000000000105
@@ -392,7 +392,7 @@ storageCosts:
         - 0x00
 
 
-    
+
     # But there are multiple ways to get it wrong:
     # Wrong storageKey
     # WRITE_ADDR_IN_LIST
@@ -401,35 +401,35 @@ storageCosts:
       - address: 0x0000000000000000000000000000000000000100
         storageKeys:
         - 0x10
-        
+
     # READ_ADDR_IN_LIST
     - data: :label undeclaredKeyRead :abi f(uint) 1
       accessList:
       - address: 0x0000000000000000000000000000000000000101
         storageKeys:
         - 0x10
-        
+
     # DEL_ADDR_IN_LIST
     - data: :label undeclaredKeyDel :abi f(uint) 2
       accessList:
       - address: 0x0000000000000000000000000000000000000102
         storageKeys:
         - 0x10
-        
+
     # UPDATE_ADDR_IN_LIST
     - data: :label undeclaredKeyUpdate :abi f(uint) 3
       accessList:
       - address: 0x0000000000000000000000000000000000000103
         storageKeys:
         - 0x10
-        
+
     # NOP_ADDR_IN_LIST
     - data: :label undeclaredKeyNOP :abi f(uint) 4
       accessList:
       - address: 0x0000000000000000000000000000000000000104
         storageKeys:
         - 0x10
-        
+
     # NOP0_ADDR_IN_LIST
     - data: :label undeclaredKeyNOP0 :abi f(uint) 5
       accessList:
@@ -445,35 +445,35 @@ storageCosts:
       - address: 0xF000000000000000000000000000000000000100
         storageKeys:
         - 0x00
-        
+
     # READ_ADDR_NOT_IN_LIST
     - data: :label undeclaredKeyRead :abi f(uint) 1
       accessList:
       - address: 0xF000000000000000000000000000000000000101
         storageKeys:
         - 0x00
-        
+
     # DEL_ADDR_NOT_IN_LIST
     - data: :label undeclaredKeyDel :abi f(uint) 2
       accessList:
       - address: 0xF000000000000000000000000000000000000101
         storageKeys:
         - 0x00
-        
+
     # UPDATE_ADDR_NOT_IN_LIST
     - data: :label undeclaredKeyUpdate :abi f(uint) 3
       accessList:
       - address: 0xF000000000000000000000000000000000000101
         storageKeys:
         - 0x00
-        
+
     # NOP_ADDR_NOT_IN_LIST
     - data: :label undeclaredKeyNOP :abi f(uint) 4
       accessList:
       - address: 0xF000000000000000000000000000000000000101
         storageKeys:
         - 0x00
-        
+
     # NOP0_ADDR_NOT_IN_LIST
     - data: :label undeclaredKeyNOP0 :abi f(uint) 5
       accessList:
@@ -484,22 +484,40 @@ storageCosts:
     # No access list at all
     # WRITE_NO_LIST
     - :label undeclaredKeyWrite  :abi f(uint) 0
-    
+
     # READ_NO_LIST
     - :label undeclaredKeyRead   :abi f(uint) 1
-    
+
     # DEL_NO_LIST
     - :label undeclaredKeyDel    :abi f(uint) 2
-    
+
     # UPDATE_NO_LIST
     - :label undeclaredKeyUpdate :abi f(uint) 3
-    
+
     # NOP_NO_LIST
     - :label undeclaredKeyNOP    :abi f(uint) 4
 
     # NOP0_NO_LIST
     - :label undeclaredKeyNOP0   :abi f(uint) 5
 
+    # No access list at all
+    # WRITE_NO_LIST
+    - :label legacyKeyWrite  :abi f(uint) 0
+
+    # READ_NO_LIST
+    - :label legacyKeyRead   :abi f(uint) 1
+
+    # DEL_NO_LIST
+    - :label legacyKeyDel    :abi f(uint) 2
+
+    # UPDATE_NO_LIST
+    - :label legacyKeyUpdate :abi f(uint) 3
+
+    # NOP_NO_LIST
+    - :label legacyKeyNOP    :abi f(uint) 4
+
+    # NOP0_NO_LIST
+    - :label legacyKeyNOP0   :abi f(uint) 5
 
     # If we had already accessed the storage (and paid the penalty
     # in case it was undeclared), it doesn't matter how we accessed it then
@@ -511,21 +529,21 @@ storageCosts:
       - address: 0x0000000000000000000000000000000000000110
         storageKeys:
         - 0x00
-        
+
     # STORE_THEN_WRITE_UNDECLARED
     - data: :label undeclaredKeyWrite_postSSTORE :abi f(uint) 0x10
       accessList:
       - address: 0x0000000000000000000000000000000000000110
         storageKeys:
         - 0x10
-        
+
     # STORE_THEN_LOAD_DECLARED
     - data: :label declaredKeyRead_postSSTORE :abi f(uint) 0x11
       accessList:
       - address: 0x0000000000000000000000000000000000000111
         storageKeys:
         - 0x00
-        
+
     # STORE_THEN_LOAD_UNDECLARED
     - data: :label undeclaredKeyRead_postSSTORE :abi f(uint) 0x11
       accessList:
@@ -539,22 +557,22 @@ storageCosts:
       - address: 0x0000000000000000000000000000000000000120
         storageKeys:
         - 0x00
-        
+
     # LOAD_THEN_WRITE_UNDECLARED
     - data: :label undeclaredKeyWrite_postSLOAD :abi f(uint) 0x20
       accessList:
       - address: 0x0000000000000000000000000000000000000120
         storageKeys:
         - 0x10
-        
-    # LOAD_THEN_READ_DECLARED        
+
+    # LOAD_THEN_READ_DECLARED
     - data: :label declaredKeyRead_postSLOAD :abi f(uint) 0x21
       accessList:
       - address: 0x0000000000000000000000000000000000000121
         storageKeys:
         - 0x00
-        
-    # LOAD_THEN_READ_UNDECLARED                
+
+    # LOAD_THEN_READ_UNDECLARED
     - data: :label undeclaredKeyRead_postSLOAD :abi f(uint) 0x21
       accessList:
       - address: 0x0000000000000000000000000000000000000121
@@ -570,7 +588,7 @@ storageCosts:
         - 0x0000
         - 0x0001
         - 0x0002
-        - 0x60A7  
+        - 0x60A7
 
     # TO_ADDR_INVALID_ADDR
     - data: :label undeclaredTo :abi f(uint) 0xFFF  # Doesn't matter which contract we call
@@ -580,8 +598,8 @@ storageCosts:
         - 0x0000
         - 0x0001
         - 0x0002
-        - 0x60A7  
- 
+        - 0x60A7
+
 
     # TO_ADDR_INVALID_CELL
     - data: :label undeclaredTo :abi f(uint) 0xFFF  # Doesn't matter which contract we call
@@ -591,16 +609,16 @@ storageCosts:
         - 0xF000
         - 0xF001
         - 0xF002
-        - 0xF0A7  
-
-
- 
+        - 0xF0A7
 
 
 
 
 
-    # Do a complex access list, see that it is still processed 
+
+
+
+    # Do a complex access list, see that it is still processed
     # correctly
     # There is just one way to validly declare that a key will
     # be used
@@ -661,7 +679,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000100:
         storage:
@@ -677,7 +696,20 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
+    result:
+      0000000000000000000000000000000000000100:
+        storage:
+          0x00: 0x02
+          0x01: 0x5657
+
+  - indexes:
+      data: :label legacyKeyWrite
+      gas: !!int -1
+      value: !!int -1
+    network:
+    - "ZkEvm"
     result:
       0000000000000000000000000000000000000100:
         storage:
@@ -693,7 +725,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000103:
         storage:
@@ -709,7 +742,20 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
+    result:
+      0000000000000000000000000000000000000103:
+        storage:
+          0x00: 0xBEEF
+          0x01: 0x138b
+
+  - indexes:
+      data: :label legacyKeyUpdate
+      gas: !!int -1
+      value: !!int -1
+    network:
+    - "ZkEvm"
     result:
       0000000000000000000000000000000000000103:
         storage:
@@ -719,14 +765,15 @@ storageCosts:
 
   # Write to a previously used storage cell, but the same value it currently has
   # This cell is declared in the access list
-  # 
+  #
   # NOP_DECLARED
   - indexes:
       data: :label declaredKeyNOP
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000104:
         storage:
@@ -744,7 +791,20 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
+    result:
+      0000000000000000000000000000000000000104:
+        storage:
+          0x00: 0x60A7
+          0x01: 0x089b
+
+  - indexes:
+      data: :label legacyKeyNOP
+      gas: !!int -1
+      value: !!int -1
+    network:
+    - "ZkEvm"
     result:
       0000000000000000000000000000000000000104:
         storage:
@@ -760,7 +820,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000105:
         storage:
@@ -777,12 +838,23 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000105:
         storage:
           0x01: 0x089b
 
+  - indexes:
+      data: :label legacyKeyNOP0
+      gas: !!int -1
+      value: !!int -1
+    network:
+    - "ZkEvm"
+    result:
+      0000000000000000000000000000000000000105:
+        storage:
+          0x01: 0x089b
 
 
 
@@ -797,7 +869,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000102:
         storage:
@@ -819,7 +892,20 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
+    result:
+      0000000000000000000000000000000000000102:
+        storage:
+          0x00: 0x00
+          0x01: 0x138b
+
+  - indexes:
+      data: :label legacyKeyDel
+      gas: !!int -1
+      value: !!int -1
+    network:
+    - "ZkEvm"
     result:
       0000000000000000000000000000000000000102:
         storage:
@@ -835,7 +921,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000101:
         storage:
@@ -846,13 +933,25 @@ storageCosts:
   # Read a storage cell that has not been declared in the access list
   # READ_ADDR_IN_LIST
   # READ_ADDR_NOT_IN_LIST
-  # READ_NO_LIST  
+  # READ_NO_LIST
   - indexes:
       data: :label undeclaredKeyRead
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
+    result:
+      0000000000000000000000000000000000000101:
+        storage:
+          0x01: 0x0834
+
+  - indexes:
+      data: :label legacyKeyRead
+      gas: !!int -1
+      value: !!int -1
+    network:
+    - "ZkEvm"
     result:
       0000000000000000000000000000000000000101:
         storage:
@@ -872,7 +971,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000110:
         storage:
@@ -894,7 +994,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000111:
         storage:
@@ -915,7 +1016,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000120:
         storage:
@@ -936,7 +1038,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       0000000000000000000000000000000000000121:
         storage:
@@ -954,7 +1057,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       cccccccccccccccccccccccccccccccccccccccc:
         storage:
@@ -976,7 +1080,8 @@ storageCosts:
       gas: !!int -1
       value: !!int -1
     network:
-    - ">=Berlin"
+    - "Berlin"
+    - ">=London"
     result:
       cccccccccccccccccccccccccccccccccccccccc:
         storage:

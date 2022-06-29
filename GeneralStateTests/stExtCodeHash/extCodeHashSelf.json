@@ -2,10 +2,10 @@
     "extCodeHashSelf" : {
         "_info" : {
             "comment" : "EXTCODEHASH/EXTCODESIZE of the currently executing account",
-            "filling-rpc-server" : "evm version 1.10.16-unstable-0f893109-20220105",
-            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.01c6aac2.Linux.g++",
-            "generatedTestHash" : "498a2fb600e3b6ced807ed8d233c9abd013600865b440f0e067c132b89bdecb8",
-            "lllcversion" : "Version: 0.5.14-develop.2021.11.27+commit.401d5358.Linux.g++",
+            "filling-rpc-server" : "evm version 1.10.19-stable",
+            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.7e597e14.Linux.g++",
+            "generatedTestHash" : "3c878ba8e5a18a80d4f97240a590907c6aeca41ac7167786df67daa5ccb097ae",
+            "lllcversion" : "Version: 0.5.14+commit.401d5358.Linux.g++",
             "solidity" : "Version: 0.8.5+commit.a4f2e591.Linux.g++",
             "source" : "src/GeneralStateTestsFiller/stExtCodeHash/extCodeHashSelfFiller.json",
             "sourceHash" : "b4628a391e8a7c8fc9a0b3ecf1eaa4c5efee3d47ffb799694b01b53ec29aa56b"
@@ -16,6 +16,7 @@
             "currentDifficulty" : "0x020000",
             "currentGasLimit" : "0x0f4240",
             "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000020000",
             "currentTimestamp" : "0x03e8",
             "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
         },
@@ -47,6 +48,30 @@
             "London" : [
                 {
                     "hash" : "0xf2d8e15f40fa061b46238e26d33295ebf3f6bec1f1443297de3fca3f58689537",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a83061a8094deadbeef0000000000000000000000000000000001801ba0c70648a23c02191279c15ab01916a8cb993eed71d08e39b46df27c4286ecc6caa0671a98307a8881b1759f11640fff23373b026be67c3cb9638d642bea99ffb908"
+                }
+            ],
+            "Merge" : [
+                {
+                    "hash" : "0xf2d8e15f40fa061b46238e26d33295ebf3f6bec1f1443297de3fca3f58689537",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a83061a8094deadbeef0000000000000000000000000000000001801ba0c70648a23c02191279c15ab01916a8cb993eed71d08e39b46df27c4286ecc6caa0671a98307a8881b1759f11640fff23373b026be67c3cb9638d642bea99ffb908"
+                }
+            ],
+            "ZkEvm" : [
+                {
+                    "hash" : "0x1231ff0e5c6a5da820dcee6ba7fc0bd7e9c8b9570a2022317dd9c4a8d7c94d22",
                     "indexes" : {
                         "data" : 0,
                         "gas" : 0,

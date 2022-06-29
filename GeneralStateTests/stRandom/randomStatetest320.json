@@ -2,10 +2,10 @@
     "randomStatetest320" : {
         "_info" : {
             "comment" : "",
-            "filling-rpc-server" : "evm version 1.10.16-unstable-0f893109-20220105",
-            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.01c6aac2.Linux.g++",
-            "generatedTestHash" : "8dc1d8316d5313162d1da8852b49ae767aad1abb97a3cc2cc40a5d678c93e917",
-            "lllcversion" : "Version: 0.5.14-develop.2021.11.27+commit.401d5358.Linux.g++",
+            "filling-rpc-server" : "evm version 1.10.19-stable",
+            "filling-tool-version" : "retesteth-0.2.2-testinfo+commit.7e597e14.Linux.g++",
+            "generatedTestHash" : "2d25edae683896fcb03be77b46dec504a15003b2d2f0b524eefa906897e6bde8",
+            "lllcversion" : "Version: 0.5.14-develop.2022.6.27+commit.401d5358.Linux.g++",
             "solidity" : "Version: 0.8.5+commit.a4f2e591.Linux.g++",
             "source" : "src/GeneralStateTestsFiller/stRandom/randomStatetest320Filler.json",
             "sourceHash" : "0882f8dde3bbc52f792f99b5e6b3bd5248d80655517cc6e326b357d90d6f3b59"
@@ -16,6 +16,7 @@
             "currentDifficulty" : "0x020000",
             "currentGasLimit" : "0x7fffffffffffffff",
             "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000020000",
             "currentTimestamp" : "0x03e8",
             "previousHash" : "0x5e20a0453cecd065ea59c37ac63e079ee08998b6045136a8ce6635c7912ec0b6"
         },
@@ -47,6 +48,30 @@
             "London" : [
                 {
                     "hash" : "0xb66fad418a719552118feb3004ee0a0d66398dd95c9b4b31c676cfeed39355c5",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf9013c800a8420a389d094095e7baea6a6c7c4c2dfeb977efac326af552d878431922948b8d67f00000000000000000000000100000000000000000000000000000000000000007f000000000000000000000000945304eb96065b2a98b57a48a06ae28d285a71b57fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff45457f000000000000000000000000000000000000000000000000000000000000c3507f000000000000000000000000945304eb96065b2a98b57a48a06ae28d285a71b57f000000000000000000000000000000000000000000000000000000000000c3505b0a36095511805131558f14fc3b1ca09661a6ba42cc10dd49fd760c9408ef8317ac6d9e8dec5cf6d9bcfa3df3ba3d7ea02551033b8d099d7b5130df25bca446b00bc863931c69ce83124b8a5a189410d0"
+                }
+            ],
+            "Merge" : [
+                {
+                    "hash" : "0xb66fad418a719552118feb3004ee0a0d66398dd95c9b4b31c676cfeed39355c5",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf9013c800a8420a389d094095e7baea6a6c7c4c2dfeb977efac326af552d878431922948b8d67f00000000000000000000000100000000000000000000000000000000000000007f000000000000000000000000945304eb96065b2a98b57a48a06ae28d285a71b57fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff45457f000000000000000000000000000000000000000000000000000000000000c3507f000000000000000000000000945304eb96065b2a98b57a48a06ae28d285a71b57f000000000000000000000000000000000000000000000000000000000000c3505b0a36095511805131558f14fc3b1ca09661a6ba42cc10dd49fd760c9408ef8317ac6d9e8dec5cf6d9bcfa3df3ba3d7ea02551033b8d099d7b5130df25bca446b00bc863931c69ce83124b8a5a189410d0"
+                }
+            ],
+            "ZkEvm" : [
+                {
+                    "hash" : "0x2458d353fab2f6dc2cdc1b84ed8bd605b5e9940b4dd8d45f355e1ff5e779308c",
                     "indexes" : {
                         "data" : 0,
                         "gas" : 0,
